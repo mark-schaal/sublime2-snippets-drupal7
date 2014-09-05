@@ -8,4 +8,5 @@ Place this file into ../Sublime Text 2/Packages/User directory and restart Subli
 
 ## Current Snippet Tab Triggers
 * **module_info** -- Triggers template for populating a module.info file
+* **module_install** -- Triggers template for populating a full module.install file
 * **hook_menu** -- Triggers template hook_menu()
