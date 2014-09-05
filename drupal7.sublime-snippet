@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+; Required Information Settings		
+name = ${1:module_name}
+description = ${2:Description of module_name}
+core = ${3:Core Version (7.x)}
+
+; Common Information Settings
+package = ${4:Package Group}
+configure = ${6:/admin/configuration/path/to/my/configuration}
+dependencies[] = ${5:module_requirement}
+
+; Additional Options and Configurations
+
+;stylesheets[${7:scope}] = ${8:stylesheet.css}
+;scripts[] = ${9:script.js}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>module_info</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
+
+<snippet>
+	<content><![CDATA[
+function ${1:module}_menu(){
+	\$items['${1:path}'] = array(
+		'title' => '${3:Menu Title}',
+		'page callback' => '${4:callback}',
+		'access arguments' => array('access content'),
+		'type' => MENU_SUGGESTED_ITEM,
+	);
+	
+	\$items['${1:path}/${2:subpath}'] = array(
+		'title' => 'Example RSS feed',
+		'page callback' => 'example_feed',
+		'access arguments' => array('access content'),
+		'type' => MENU_CALLBACK,
+	);
+
+	return \$items;
+}
+
+function ${4:callback}(){
+	return true;
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hook_menu</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
