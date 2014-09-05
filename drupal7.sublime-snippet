@@ -11,9 +11,10 @@ configure = ${6:/admin/configuration/path/to/my/configuration}
 dependencies[] = ${5:module_requirement}
 
 ; Additional Options and Configurations
-
-;stylesheets[${7:scope}] = ${8:stylesheet.css}
-;scripts[] = ${9:script.js}
+;stylesheets[${7:scope}] = ${8:css/stylesheet.css}
+;scripts[] = ${9:js/script.js}
+;files[] = ${10:example.test}
+;php = ${11:5.3}
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

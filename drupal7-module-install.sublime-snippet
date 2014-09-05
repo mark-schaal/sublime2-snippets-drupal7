@@ -1,0 +1,53 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * Implements hook_requirements(\$phase)
+ */
+function ${1:my_module}_requirements(\$phase)\{
+	\$requirements = array();
+	\$t = get_t();
+
+	switch (\$phase) \{
+		case 'install':
+		break;
+		case 'update':
+		break;
+		case 'runtime':
+		break;
+	\}
+	return \$requirements;
+\}
+
+
+/**
+ * Implememnts hook_install()
+ */
+function ${1:my_module}_install()\{
+	node_types_rebuild();
+	\$types = node_type_get_types();
+\}
+
+
+/**
+ * Implememnts hook_enable()
+ */
+function ${1:my_module}_enable()\{
+	node_types_rebuild();
+	\$types = node_type_get_types();
+\}
+
+
+/**
+ * Implememnts hook_uninstall()
+ */
+function ${1:my_module}_uninstall()\{
+	node_types_rebuild();
+	\$types = node_type_get_types();
+\}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>module_install</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
